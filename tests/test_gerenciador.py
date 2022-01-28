@@ -12,11 +12,13 @@ def test_quando_listar_tarefas_devo_ter_como_retorno_codigo_de_status_200():
 
     assert response.status_code == status.HTTP_200_OK
 
+
 def test_quando_listar_tarefas_formato_de_retorno_deve_ser_json():
     client = TestClient(app)
     response = client.get('/tarefas')
 
     assert response.headers['Content-Type'] == 'application/json'
+
 
 def test_quando_listar_tarefas_retorno_deve_ser_uma_lista():
     client = TestClient(app)
@@ -24,8 +26,9 @@ def test_quando_listar_tarefas_retorno_deve_ser_uma_lista():
 
     assert isinstance(response.json(), list)
 
+
 def test_quando_listar_tarefas_a_tarefa_retornada_deve_possuir_ID():
-    TAREFAS.append({'id':1})
+    TAREFAS.append({'id': 1})
     client = TestClient(app)
     response = client.get('/tarefas')
 
@@ -33,8 +36,9 @@ def test_quando_listar_tarefas_a_tarefa_retornada_deve_possuir_ID():
 
     TAREFAS.clear()
 
+
 def test_quanto_listar_tarefas_a_tarefa_deve_possuir_titulo():
-    TAREFAS.append({'titulo':'Exemplo de Título'})
+    TAREFAS.append({'titulo': 'Exemplo de Título'})
     client = TestClient(app)
     response = client.get('/tarefas')
 
@@ -42,8 +46,9 @@ def test_quanto_listar_tarefas_a_tarefa_deve_possuir_titulo():
 
     TAREFAS.clear()
 
+
 def test_quando_listar_tarefas_a_tarefa_deve_possuir_descrição():
-    TAREFAS.append({'descrição':'Exemplo de descrição'})
+    TAREFAS.append({'descrição': 'Exemplo de descrição'})
     client = TestClient(app)
     response = client.get('/tarefas')
 
@@ -51,8 +56,9 @@ def test_quando_listar_tarefas_a_tarefa_deve_possuir_descrição():
 
     TAREFAS.clear()
 
+
 def test_quando_listar_tarefas_a_tarefa_deve_possuir_estado():
-    TAREFAS.append({'estado':'Exemplo de estado'})
+    TAREFAS.append({'estado': 'Exemplo de estado'})
     client = TestClient(app)
     response = client.get('/tarefas')
 

@@ -12,13 +12,15 @@ TAREFAS = [
     {
         "id": "2",
         "titulo": "Levar o cachorro para tosar",
-        "descrição": "Como estamos o verão e o pet está muito peludo, faz-se necessário.",
+        "descrição":
+        "Como estamos o verão e o pet está muito peludo, faz-se necessário.",
         "estado": "não finalizado",
     },
     {
         "id": "3",
         "titulo": "Colocar as roupas na máquina para lavar",
-        "descrição": "Como só tenho a roupa que estou usando é urgente lavar as sujas.",
+        "descrição":
+        "Como só tenho a roupa que estou usando é urgente lavar as sujas.",
         "estado": "não finalizado",
     },
 ]
